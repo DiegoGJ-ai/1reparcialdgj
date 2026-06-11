@@ -3,7 +3,7 @@ name: Deploy to Surge
 on:
   push:
     branches:
-      - main  # Esto hace que se active cada vez que subes cambios a la rama main
+      - main
 
 jobs:
   deploy:
@@ -24,5 +24,4 @@ jobs:
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-        # CAMBIA 'tu-nombre-unico.surge.sh' por algo inventado por ti (ej: miproye-123.surge.sh)
-        run: surge ./ tu-nombre-unico.surge.sh
+        run: surge ./ mi-proyecto-clase-1006.surge.sh
